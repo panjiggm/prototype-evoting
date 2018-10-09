@@ -1,0 +1,173 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>E-Voting | KPU</title>
+</head>
+
+<body>
+    <!-- Mulai - Navigasi -->
+    <nav>
+        <div class="nav-wrapper orange">
+            <div class="container">
+                <a href="/" class="brand-logo left">E-Voting | KPU Kabupaten Tangerang</a>
+                <ul class="right">
+                    <li><a class="waves-effect waves-light btn modal-trigger" href="#avis1">BANTUAN</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Selesai - Navigasi -->
+
+    <!-- Mulai - Modal Structure -->
+    <div id="avis1" class="modal">
+        <div class="modal-content">
+            <h4>Bantuan</h4>
+
+            <p>Untuk Mengunduh hasil voting dan perhitungan suara, silahkan tekan tombol unduh melalui 'floating button' yang ada di pojok kanan bawah</p>
+
+            <p>dan jika ingin melakukan print out hasil voting dan perhitungan suara, silahkan tekan tombol print melalui 'floating button' yang ada di pojok kanan bawah</p>
+        </div>
+
+        <div class="modal-footer">
+            <button class="modal-action modal-close btn waves-effect waves-light" name="action">
+                <i class="fa fa-check-circle right"></i> OKE
+            </button>
+        </div>
+    </div>
+    <!-- Selesai - Modal Structure -->
+
+    <!-- Mulai - Header -->
+    <div class="container">
+        <div class="card">
+            <div class="card-content center">
+                <img src="img/kpu.jpg" height="140">
+            </div>
+        </div>
+    </div>
+    <!-- Selesai - Header -->
+
+    <!-- Mulai - Jam -->
+    <div class="container">
+        <div class="row">
+          <div class="col s4">
+            <div class="card">
+                <div class="card-content center">
+                    <div id="time"></div>
+                </div>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="card">
+                <div class="card-content center">
+                    <div id="total_voting"></div>
+                </div>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="card">
+                <div class="card-content center">
+                    <div id="css_tot"> Total Voters : 100 ~ Sisa Voters : <span id="vote_tot"></span></div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <!-- Selesai - Jam -->
+
+    <!-- mulai - Badan Tampilan Voting-->
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12 m6 l3 center">
+                        <h5>Paslon Satu</h5>
+                        <h4 id="showVote1"></h4>
+                    </div>
+                    <div class="col s12 m6 l3 center">
+                        <h5>Paslon Dua</h5>
+                        <h4 id="showVote2"></lh4>
+                    </div>
+                    <div class="col s12 m6 l3 center">
+                        <h5>Paslon Tiga</h5>
+                        <h4 id="showVote3"></h4>
+                    </div>
+                    <div class="col s12 m6 l3 center">
+                        <h5 style="color: red;">Suara Golput</h5>
+                        <h4 id="showVote4"></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title center">Total Perhitungan Suara :</span>
+                                <div>
+                                    <canvas id="vote-result"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Selesai - Badan Tampilan Voting -->
+
+    <!-- Mulai - Floating Button -->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="large fa fa-align-justify"></i>
+        </a>
+        <ul>
+            <li><button class="btn-floating green" id="generateDownloadPDF"><i class="fa fa-download"></i></button></li>
+            <li><a class="btn-floating blue" id="generatePrintPDF"><i class="fa fa-print"></i></a></li>
+        </ul>
+    </div>
+    <!-- Selesai - Floating Button -->
+
+    <!-- Mulai Footer -->
+    <footer class="page-footer orange darken-2" style="margin-top: 200px">
+        <div class="container">
+            <div class="row">
+
+                <div class="col l3 offset-l1 m6 s12">
+                    <h5 class="green-text text-lighten-5">Contact</h5>
+                </div>
+
+                <div class="col l3 offset-l1 m6 s12">
+                        <ul>
+                            <li class="green-text text-lighten-5">Email:</li>
+                            <li><a class="lime-text text-accent-1" href="humas@kpu-tangerangkab.go.id">humas@kpu-tangerangkab.go.id</a></li>
+                        </ul>
+                    </div>
+
+                <div class="col l3 offset-l1 m6 s12">
+                    <ul>
+                        <li class="green-text text-lighten-5">Telpon:</li>
+                        <li class="lime-text text-accent-1">(021) 5991639</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <span class="lime-text text-accent-1">Copyright © 2018. KPU Kabupaten Tangerang</span>
+                <a class="lime-text right text-accent-1" href="#!"><i class="fa fa-facebook-square"></i> Facebook</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Selesai Footer -->
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+
+<script src="script.js"></script>
+</html>
