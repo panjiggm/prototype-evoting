@@ -3,22 +3,19 @@
 Protoype E-Voting Berbasis IoT Menggunakan Raspberry Pi, LCD Touchscreen dan Speaker.
 
 ## Requirements
-```
 * Linux / Raspbian OS
 * NodeJS v8.X and up
 * NPM v4.X and up
 * Text Editor
 * Terminal
-```
 
 ## Installation
 ### Open Terminal
-* Clone Repository
-`$ git clone https://github.com/panjiggm/prototype-evoting.git
-* Move to Project Folder
-`$ cd prototype-evoting
-* Install Dependencies
-`$ npm install
+```
+$ git clone https://github.com/panjiggm/prototype-evoting.git
+$ cd prototype-evoting
+$ npm install
+```
 
 ### Browser
 `http://localhost:5432/
